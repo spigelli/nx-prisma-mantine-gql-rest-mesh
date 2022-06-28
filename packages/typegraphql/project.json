@@ -1,0 +1,47 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/typegraphql/src",
+  "projectType": "library",
+  "tasksRunnerOptions": {
+    "default": {
+      "options": {
+        "cacheableOperations": []
+      }
+    }
+  },
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/prisma-example/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/packages/prisma-example"],
+      "options": {
+        "jestConfig": "packages/prisma-example/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "generate": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "yarn prisma generate --schema=$(pwd)/prisma/schema.prisma"
+        ],
+        "cwd": "packages/typegraphql"
+      }
+    },
+    "build": {
+      "dependsOn": ["generate"],
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["tsc -p ./tsconfig.lib.json"],
+        "cwd": "packages/typegraphql"
+      }
+    }
+  },
+  "tags": []
+}
