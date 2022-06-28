@@ -1,4 +1,3 @@
 describe('prismaExample', () => {
-  it('should work', () => {
-  });
+  it('should work', () => {});
 });

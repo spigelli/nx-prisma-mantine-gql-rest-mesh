@@ -1,76 +1,76 @@
-import * as TypeGraphQL from "type-graphql";
-import * as GraphQLScalars from "graphql-scalars";
-import { Prisma } from "@prisma/client";
-import { DecimalJSScalar } from "../../scalars";
-import { UserOrderByWithRelationInput } from "../inputs/UserOrderByWithRelationInput";
-import { SortOrder } from "../../enums/SortOrder";
+import * as TypeGraphQL from 'type-graphql';
+import * as GraphQLScalars from 'graphql-scalars';
+import { Prisma } from '@prisma/client';
+import { DecimalJSScalar } from '../../scalars';
+import { UserOrderByWithRelationInput } from '../inputs/UserOrderByWithRelationInput';
+import { SortOrder } from '../../enums/SortOrder';
 
-@TypeGraphQL.InputType("AccountOrderByWithRelationInput", {
-  isAbstract: true
+@TypeGraphQL.InputType('AccountOrderByWithRelationInput', {
+  isAbstract: true,
 })
 export class AccountOrderByWithRelationInput {
-  @TypeGraphQL.Field(_type => SortOrder, {
-    nullable: true
+  @TypeGraphQL.Field((_type) => SortOrder, {
+    nullable: true,
   })
-  id?: "asc" | "desc" | undefined;
+  id?: 'asc' | 'desc' | undefined;
 
-  @TypeGraphQL.Field(_type => SortOrder, {
-    nullable: true
+  @TypeGraphQL.Field((_type) => SortOrder, {
+    nullable: true,
   })
-  userId?: "asc" | "desc" | undefined;
+  userId?: 'asc' | 'desc' | undefined;
 
-  @TypeGraphQL.Field(_type => SortOrder, {
-    nullable: true
+  @TypeGraphQL.Field((_type) => SortOrder, {
+    nullable: true,
   })
-  type?: "asc" | "desc" | undefined;
+  type?: 'asc' | 'desc' | undefined;
 
-  @TypeGraphQL.Field(_type => SortOrder, {
-    nullable: true
+  @TypeGraphQL.Field((_type) => SortOrder, {
+    nullable: true,
   })
-  provider?: "asc" | "desc" | undefined;
+  provider?: 'asc' | 'desc' | undefined;
 
-  @TypeGraphQL.Field(_type => SortOrder, {
-    nullable: true
+  @TypeGraphQL.Field((_type) => SortOrder, {
+    nullable: true,
   })
-  providerAccountId?: "asc" | "desc" | undefined;
+  providerAccountId?: 'asc' | 'desc' | undefined;
 
-  @TypeGraphQL.Field(_type => SortOrder, {
-    nullable: true
+  @TypeGraphQL.Field((_type) => SortOrder, {
+    nullable: true,
   })
-  refresh_token?: "asc" | "desc" | undefined;
+  refresh_token?: 'asc' | 'desc' | undefined;
 
-  @TypeGraphQL.Field(_type => SortOrder, {
-    nullable: true
+  @TypeGraphQL.Field((_type) => SortOrder, {
+    nullable: true,
   })
-  access_token?: "asc" | "desc" | undefined;
+  access_token?: 'asc' | 'desc' | undefined;
 
-  @TypeGraphQL.Field(_type => SortOrder, {
-    nullable: true
+  @TypeGraphQL.Field((_type) => SortOrder, {
+    nullable: true,
   })
-  expires_at?: "asc" | "desc" | undefined;
+  expires_at?: 'asc' | 'desc' | undefined;
 
-  @TypeGraphQL.Field(_type => SortOrder, {
-    nullable: true
+  @TypeGraphQL.Field((_type) => SortOrder, {
+    nullable: true,
   })
-  token_type?: "asc" | "desc" | undefined;
+  token_type?: 'asc' | 'desc' | undefined;
 
-  @TypeGraphQL.Field(_type => SortOrder, {
-    nullable: true
+  @TypeGraphQL.Field((_type) => SortOrder, {
+    nullable: true,
   })
-  scope?: "asc" | "desc" | undefined;
+  scope?: 'asc' | 'desc' | undefined;
 
-  @TypeGraphQL.Field(_type => SortOrder, {
-    nullable: true
+  @TypeGraphQL.Field((_type) => SortOrder, {
+    nullable: true,
   })
-  id_token?: "asc" | "desc" | undefined;
+  id_token?: 'asc' | 'desc' | undefined;
 
-  @TypeGraphQL.Field(_type => SortOrder, {
-    nullable: true
+  @TypeGraphQL.Field((_type) => SortOrder, {
+    nullable: true,
   })
-  session_state?: "asc" | "desc" | undefined;
+  session_state?: 'asc' | 'desc' | undefined;
 
-  @TypeGraphQL.Field(_type => UserOrderByWithRelationInput, {
-    nullable: true
+  @TypeGraphQL.Field((_type) => UserOrderByWithRelationInput, {
+    nullable: true,
   })
   user?: UserOrderByWithRelationInput | undefined;
 }

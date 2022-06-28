@@ -538,33 +538,88 @@ input IntNullableWithAggregatesFilter {
 
 type Mutation {
   createAccount(data: AccountCreateInput!): Account!
-  createManyAccount(data: [AccountCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManySession(data: [SessionCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyUser(data: [UserCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
-  createManyVerificationToken(data: [VerificationTokenCreateManyInput!]!, skipDuplicates: Boolean): AffectedRowsOutput!
+  createManyAccount(
+    data: [AccountCreateManyInput!]!
+    skipDuplicates: Boolean
+  ): AffectedRowsOutput!
+  createManySession(
+    data: [SessionCreateManyInput!]!
+    skipDuplicates: Boolean
+  ): AffectedRowsOutput!
+  createManyUser(
+    data: [UserCreateManyInput!]!
+    skipDuplicates: Boolean
+  ): AffectedRowsOutput!
+  createManyVerificationToken(
+    data: [VerificationTokenCreateManyInput!]!
+    skipDuplicates: Boolean
+  ): AffectedRowsOutput!
   createSession(data: SessionCreateInput!): Session!
   createUser(data: UserCreateInput!): User!
-  createVerificationToken(data: VerificationTokenCreateInput!): VerificationToken!
+  createVerificationToken(
+    data: VerificationTokenCreateInput!
+  ): VerificationToken!
   deleteAccount(where: AccountWhereUniqueInput!): Account
   deleteManyAccount(where: AccountWhereInput): AffectedRowsOutput!
   deleteManySession(where: SessionWhereInput): AffectedRowsOutput!
   deleteManyUser(where: UserWhereInput): AffectedRowsOutput!
-  deleteManyVerificationToken(where: VerificationTokenWhereInput): AffectedRowsOutput!
+  deleteManyVerificationToken(
+    where: VerificationTokenWhereInput
+  ): AffectedRowsOutput!
   deleteSession(where: SessionWhereUniqueInput!): Session
   deleteUser(where: UserWhereUniqueInput!): User
-  deleteVerificationToken(where: VerificationTokenWhereUniqueInput!): VerificationToken
-  updateAccount(data: AccountUpdateInput!, where: AccountWhereUniqueInput!): Account
-  updateManyAccount(data: AccountUpdateManyMutationInput!, where: AccountWhereInput): AffectedRowsOutput!
-  updateManySession(data: SessionUpdateManyMutationInput!, where: SessionWhereInput): AffectedRowsOutput!
-  updateManyUser(data: UserUpdateManyMutationInput!, where: UserWhereInput): AffectedRowsOutput!
-  updateManyVerificationToken(data: VerificationTokenUpdateManyMutationInput!, where: VerificationTokenWhereInput): AffectedRowsOutput!
-  updateSession(data: SessionUpdateInput!, where: SessionWhereUniqueInput!): Session
+  deleteVerificationToken(
+    where: VerificationTokenWhereUniqueInput!
+  ): VerificationToken
+  updateAccount(
+    data: AccountUpdateInput!
+    where: AccountWhereUniqueInput!
+  ): Account
+  updateManyAccount(
+    data: AccountUpdateManyMutationInput!
+    where: AccountWhereInput
+  ): AffectedRowsOutput!
+  updateManySession(
+    data: SessionUpdateManyMutationInput!
+    where: SessionWhereInput
+  ): AffectedRowsOutput!
+  updateManyUser(
+    data: UserUpdateManyMutationInput!
+    where: UserWhereInput
+  ): AffectedRowsOutput!
+  updateManyVerificationToken(
+    data: VerificationTokenUpdateManyMutationInput!
+    where: VerificationTokenWhereInput
+  ): AffectedRowsOutput!
+  updateSession(
+    data: SessionUpdateInput!
+    where: SessionWhereUniqueInput!
+  ): Session
   updateUser(data: UserUpdateInput!, where: UserWhereUniqueInput!): User
-  updateVerificationToken(data: VerificationTokenUpdateInput!, where: VerificationTokenWhereUniqueInput!): VerificationToken
-  upsertAccount(create: AccountCreateInput!, update: AccountUpdateInput!, where: AccountWhereUniqueInput!): Account!
-  upsertSession(create: SessionCreateInput!, update: SessionUpdateInput!, where: SessionWhereUniqueInput!): Session!
-  upsertUser(create: UserCreateInput!, update: UserUpdateInput!, where: UserWhereUniqueInput!): User!
-  upsertVerificationToken(create: VerificationTokenCreateInput!, update: VerificationTokenUpdateInput!, where: VerificationTokenWhereUniqueInput!): VerificationToken!
+  updateVerificationToken(
+    data: VerificationTokenUpdateInput!
+    where: VerificationTokenWhereUniqueInput!
+  ): VerificationToken
+  upsertAccount(
+    create: AccountCreateInput!
+    update: AccountUpdateInput!
+    where: AccountWhereUniqueInput!
+  ): Account!
+  upsertSession(
+    create: SessionCreateInput!
+    update: SessionUpdateInput!
+    where: SessionWhereUniqueInput!
+  ): Session!
+  upsertUser(
+    create: UserCreateInput!
+    update: UserUpdateInput!
+    where: UserWhereUniqueInput!
+  ): User!
+  upsertVerificationToken(
+    create: VerificationTokenCreateInput!
+    update: VerificationTokenUpdateInput!
+    where: VerificationTokenWhereUniqueInput!
+  ): VerificationToken!
 }
 
 input NestedDateTimeFilter {
@@ -746,25 +801,135 @@ input NullableStringFieldUpdateOperationsInput {
 
 type Query {
   account(where: AccountWhereUniqueInput!): Account
-  accounts(cursor: AccountWhereUniqueInput, distinct: [AccountScalarFieldEnum!], orderBy: [AccountOrderByWithRelationInput!], skip: Int, take: Int, where: AccountWhereInput): [Account!]!
-  aggregateAccount(cursor: AccountWhereUniqueInput, orderBy: [AccountOrderByWithRelationInput!], skip: Int, take: Int, where: AccountWhereInput): AggregateAccount!
-  aggregateSession(cursor: SessionWhereUniqueInput, orderBy: [SessionOrderByWithRelationInput!], skip: Int, take: Int, where: SessionWhereInput): AggregateSession!
-  aggregateUser(cursor: UserWhereUniqueInput, orderBy: [UserOrderByWithRelationInput!], skip: Int, take: Int, where: UserWhereInput): AggregateUser!
-  aggregateVerificationToken(cursor: VerificationTokenWhereUniqueInput, orderBy: [VerificationTokenOrderByWithRelationInput!], skip: Int, take: Int, where: VerificationTokenWhereInput): AggregateVerificationToken!
-  findFirstAccount(cursor: AccountWhereUniqueInput, distinct: [AccountScalarFieldEnum!], orderBy: [AccountOrderByWithRelationInput!], skip: Int, take: Int, where: AccountWhereInput): Account
-  findFirstSession(cursor: SessionWhereUniqueInput, distinct: [SessionScalarFieldEnum!], orderBy: [SessionOrderByWithRelationInput!], skip: Int, take: Int, where: SessionWhereInput): Session
-  findFirstUser(cursor: UserWhereUniqueInput, distinct: [UserScalarFieldEnum!], orderBy: [UserOrderByWithRelationInput!], skip: Int, take: Int, where: UserWhereInput): User
-  findFirstVerificationToken(cursor: VerificationTokenWhereUniqueInput, distinct: [VerificationTokenScalarFieldEnum!], orderBy: [VerificationTokenOrderByWithRelationInput!], skip: Int, take: Int, where: VerificationTokenWhereInput): VerificationToken
-  groupByAccount(by: [AccountScalarFieldEnum!]!, having: AccountScalarWhereWithAggregatesInput, orderBy: [AccountOrderByWithAggregationInput!], skip: Int, take: Int, where: AccountWhereInput): [AccountGroupBy!]!
-  groupBySession(by: [SessionScalarFieldEnum!]!, having: SessionScalarWhereWithAggregatesInput, orderBy: [SessionOrderByWithAggregationInput!], skip: Int, take: Int, where: SessionWhereInput): [SessionGroupBy!]!
-  groupByUser(by: [UserScalarFieldEnum!]!, having: UserScalarWhereWithAggregatesInput, orderBy: [UserOrderByWithAggregationInput!], skip: Int, take: Int, where: UserWhereInput): [UserGroupBy!]!
-  groupByVerificationToken(by: [VerificationTokenScalarFieldEnum!]!, having: VerificationTokenScalarWhereWithAggregatesInput, orderBy: [VerificationTokenOrderByWithAggregationInput!], skip: Int, take: Int, where: VerificationTokenWhereInput): [VerificationTokenGroupBy!]!
+  accounts(
+    cursor: AccountWhereUniqueInput
+    distinct: [AccountScalarFieldEnum!]
+    orderBy: [AccountOrderByWithRelationInput!]
+    skip: Int
+    take: Int
+    where: AccountWhereInput
+  ): [Account!]!
+  aggregateAccount(
+    cursor: AccountWhereUniqueInput
+    orderBy: [AccountOrderByWithRelationInput!]
+    skip: Int
+    take: Int
+    where: AccountWhereInput
+  ): AggregateAccount!
+  aggregateSession(
+    cursor: SessionWhereUniqueInput
+    orderBy: [SessionOrderByWithRelationInput!]
+    skip: Int
+    take: Int
+    where: SessionWhereInput
+  ): AggregateSession!
+  aggregateUser(
+    cursor: UserWhereUniqueInput
+    orderBy: [UserOrderByWithRelationInput!]
+    skip: Int
+    take: Int
+    where: UserWhereInput
+  ): AggregateUser!
+  aggregateVerificationToken(
+    cursor: VerificationTokenWhereUniqueInput
+    orderBy: [VerificationTokenOrderByWithRelationInput!]
+    skip: Int
+    take: Int
+    where: VerificationTokenWhereInput
+  ): AggregateVerificationToken!
+  findFirstAccount(
+    cursor: AccountWhereUniqueInput
+    distinct: [AccountScalarFieldEnum!]
+    orderBy: [AccountOrderByWithRelationInput!]
+    skip: Int
+    take: Int
+    where: AccountWhereInput
+  ): Account
+  findFirstSession(
+    cursor: SessionWhereUniqueInput
+    distinct: [SessionScalarFieldEnum!]
+    orderBy: [SessionOrderByWithRelationInput!]
+    skip: Int
+    take: Int
+    where: SessionWhereInput
+  ): Session
+  findFirstUser(
+    cursor: UserWhereUniqueInput
+    distinct: [UserScalarFieldEnum!]
+    orderBy: [UserOrderByWithRelationInput!]
+    skip: Int
+    take: Int
+    where: UserWhereInput
+  ): User
+  findFirstVerificationToken(
+    cursor: VerificationTokenWhereUniqueInput
+    distinct: [VerificationTokenScalarFieldEnum!]
+    orderBy: [VerificationTokenOrderByWithRelationInput!]
+    skip: Int
+    take: Int
+    where: VerificationTokenWhereInput
+  ): VerificationToken
+  groupByAccount(
+    by: [AccountScalarFieldEnum!]!
+    having: AccountScalarWhereWithAggregatesInput
+    orderBy: [AccountOrderByWithAggregationInput!]
+    skip: Int
+    take: Int
+    where: AccountWhereInput
+  ): [AccountGroupBy!]!
+  groupBySession(
+    by: [SessionScalarFieldEnum!]!
+    having: SessionScalarWhereWithAggregatesInput
+    orderBy: [SessionOrderByWithAggregationInput!]
+    skip: Int
+    take: Int
+    where: SessionWhereInput
+  ): [SessionGroupBy!]!
+  groupByUser(
+    by: [UserScalarFieldEnum!]!
+    having: UserScalarWhereWithAggregatesInput
+    orderBy: [UserOrderByWithAggregationInput!]
+    skip: Int
+    take: Int
+    where: UserWhereInput
+  ): [UserGroupBy!]!
+  groupByVerificationToken(
+    by: [VerificationTokenScalarFieldEnum!]!
+    having: VerificationTokenScalarWhereWithAggregatesInput
+    orderBy: [VerificationTokenOrderByWithAggregationInput!]
+    skip: Int
+    take: Int
+    where: VerificationTokenWhereInput
+  ): [VerificationTokenGroupBy!]!
   session(where: SessionWhereUniqueInput!): Session
-  sessions(cursor: SessionWhereUniqueInput, distinct: [SessionScalarFieldEnum!], orderBy: [SessionOrderByWithRelationInput!], skip: Int, take: Int, where: SessionWhereInput): [Session!]!
+  sessions(
+    cursor: SessionWhereUniqueInput
+    distinct: [SessionScalarFieldEnum!]
+    orderBy: [SessionOrderByWithRelationInput!]
+    skip: Int
+    take: Int
+    where: SessionWhereInput
+  ): [Session!]!
   user(where: UserWhereUniqueInput!): User
-  users(cursor: UserWhereUniqueInput, distinct: [UserScalarFieldEnum!], orderBy: [UserOrderByWithRelationInput!], skip: Int, take: Int, where: UserWhereInput): [User!]!
-  verificationToken(where: VerificationTokenWhereUniqueInput!): VerificationToken
-  verificationTokens(cursor: VerificationTokenWhereUniqueInput, distinct: [VerificationTokenScalarFieldEnum!], orderBy: [VerificationTokenOrderByWithRelationInput!], skip: Int, take: Int, where: VerificationTokenWhereInput): [VerificationToken!]!
+  users(
+    cursor: UserWhereUniqueInput
+    distinct: [UserScalarFieldEnum!]
+    orderBy: [UserOrderByWithRelationInput!]
+    skip: Int
+    take: Int
+    where: UserWhereInput
+  ): [User!]!
+  verificationToken(
+    where: VerificationTokenWhereUniqueInput!
+  ): VerificationToken
+  verificationTokens(
+    cursor: VerificationTokenWhereUniqueInput
+    distinct: [VerificationTokenScalarFieldEnum!]
+    orderBy: [VerificationTokenOrderByWithRelationInput!]
+    skip: Int
+    take: Int
+    where: VerificationTokenWhereInput
+  ): [VerificationToken!]!
 }
 
 enum QueryMode {
@@ -1073,13 +1238,27 @@ input StringWithAggregatesFilter {
 
 type User {
   _count: UserCount
-  accounts(cursor: AccountWhereUniqueInput, distinct: [AccountScalarFieldEnum!], orderBy: [AccountOrderByWithRelationInput!], skip: Int, take: Int, where: AccountWhereInput): [Account!]!
+  accounts(
+    cursor: AccountWhereUniqueInput
+    distinct: [AccountScalarFieldEnum!]
+    orderBy: [AccountOrderByWithRelationInput!]
+    skip: Int
+    take: Int
+    where: AccountWhereInput
+  ): [Account!]!
   email: String
   emailVerified: DateTime
   id: String!
   image: String
   name: String
-  sessions(cursor: SessionWhereUniqueInput, distinct: [SessionScalarFieldEnum!], orderBy: [SessionOrderByWithRelationInput!], skip: Int, take: Int, where: SessionWhereInput): [Session!]!
+  sessions(
+    cursor: SessionWhereUniqueInput
+    distinct: [SessionScalarFieldEnum!]
+    orderBy: [SessionOrderByWithRelationInput!]
+    skip: Int
+    take: Int
+    where: SessionWhereInput
+  ): [Session!]!
 }
 
 type UserCount {
