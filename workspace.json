@@ -1,0 +1,9 @@
+{
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json",
+  "version": 2,
+  "projects": {
+    "prisma": "packages/prisma",
+    "typegraphql": "packages/typegraphql",
+    "typegraphql-server": "applications/typegraphql-server"
+  }
+}

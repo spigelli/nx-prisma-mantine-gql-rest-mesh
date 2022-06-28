@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "cli": "nx",
+  "$id": "NxMantineNextJs",
+  "title": "Create a Mantine Nextjs Application for Nx",
+  "description": "Create a Mantine Nextjs for an Nx workspace.",
+  "type": "object",
+  "examples": [
+    {
+      "command": "nx g lib mylib --directory=myapp",
+      "description": "Generate `libs/myapp/mylib`"
+    }
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Library name",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "x-prompt": "What name would you like to use for the library?"
+    },
+    "directory": {
+      "type": "string",
+      "description": "A directory where the lib is placed",
+      "alias": "dir"
+    },
+    "simpleModuleName": {
+      "description": "Keep the module name simple (when using `--directory`).",
+      "type": "boolean",
+      "default": false
+    },
+    "tags": {
+      "type": "string",
+      "description": "Add tags to the library (used for linting).",
+      "alias": "t"
+    },
+    "publishable": {
+      "type": "boolean",
+      "description": "Create a publishable library."
+    },
+    "buildable": {
+      "type": "boolean",
+      "default": false,
+      "description": "Generate a buildable library."
+    },
+    "importPath": {
+      "type": "string",
+      "description": "The library name used to import it, like `@myorg/my-awesome-lib`. Must be a valid npm name."
+    },
+    "rootDir": {
+      "type": "string",
+      "description": "Sets the `rootDir` for TypeScript compilation. When not defined, it uses the project's root property, or `srcRootForCompilationRoot` if it is defined."
+    },
+    "pascalCaseFiles": {
+      "type": "boolean",
+      "description": "Use pascal case file names.",
+      "alias": "P",
+      "default": false
+    }
+  },
+  "required": ["name"]
+}

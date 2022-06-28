@@ -1,0 +1,47 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/prisma/src",
+  "projectType": "library",
+  "tasksRunnerOptions": {
+    "default": {
+      "options": {
+        "cacheableOperations": []
+      }
+    }
+  },
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/prisma/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/packages/prisma"],
+      "options": {
+        "jestConfig": "packages/prisma/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "generate": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "yarn prisma generate --schema=$(pwd)/prisma/schema.prisma"
+        ],
+        "cwd": "packages/prisma"
+      }
+    },
+    "build": {
+      "dependsOn": ["generate"],
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["tsc -p ./tsconfig.lib.json"],
+        "cwd": "packages/prisma"
+      }
+    }
+  },
+  "tags": []
+}
