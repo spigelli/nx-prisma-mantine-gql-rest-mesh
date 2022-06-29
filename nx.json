@@ -47,5 +47,5 @@
       }
     }
   },
-  "defaultProject": "mantine-template"
+  "defaultProject": "mantine-nextauth-template"
 }

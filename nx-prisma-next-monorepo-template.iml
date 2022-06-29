@@ -11,9 +11,9 @@
       <sourceFolder url="file://$MODULE_DIR$/packages/mantine-ui" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/packages/prisma" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/packages/typegraphql" isTestSource="false" />
-      <excludeFolder url="file://$MODULE_DIR$/.idea" />
-      <excludeFolder url="file://$MODULE_DIR$/applications/mantine-ui-e2e" />
       <excludeFolder url="file://$MODULE_DIR$/applications/mantine-template-e2e" />
+      <excludeFolder url="file://$MODULE_DIR$/applications/mantine-ui-e2e" />
+      <excludeFolder url="file://$MODULE_DIR$/.idea" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
