@@ -149,7 +149,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "/Users/isaacspiegel/Documents/Repositories/qrscribe-gql/packages/prisma/src/generated/prisma-client-js",
+      "value": "/Users/isaacspiegel/Documents/Repositories/nx-prisma-gen-template/packages/prisma/src/generated/prisma-client-js",
       "fromEnvVar": null
     },
     "config": {

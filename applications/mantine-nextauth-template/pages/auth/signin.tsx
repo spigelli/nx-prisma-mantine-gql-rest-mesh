@@ -24,6 +24,7 @@ export default function SignIn({ providers }) {
   }), [providers, commonSignInOptions]);
 
   return (
+    /* @ts-ignore */
     <Container
       size="sm"
       style={{ height: '100vh' }}
@@ -42,7 +43,7 @@ export default function SignIn({ providers }) {
   );
 }
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps() {
   const providers = await getProviders()
   return {
     props: { providers },
