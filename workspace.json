@@ -2,6 +2,11 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
+    "configuration": "packages/configuration",
+    "dev-database": "applications/dev-database",
+    "mantine-nextauth-template": "applications/mantine-nextauth-template",
+    "mantine-template": "applications/mantine-template",
+    "mantine-ui": "packages/mantine-ui",
     "prisma": "packages/prisma",
     "typegraphql": "packages/typegraphql",
     "typegraphql-server": "applications/typegraphql-server"

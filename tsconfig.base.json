@@ -10,30 +10,16 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": [
-      "es2017",
-      "dom"
-    ],
+    "lib": ["es2017", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@qrscribe-dev/prisma": [
-        "packages/prisma/src/index.ts"
-      ],
-      "@qrscribe-dev/typegraphql": [
-        "packages/typegraphql/src/index.ts"
-      ],
-      "@qrscribe/prisma": [
-        "dist/out-tsc/packages/prisma/src"
-      ],
-      "@qrscribe/typegraphql": [
-        "dist/out-tsc/packages/typegraphql/src"
-      ]
+      "@qrscribe/configuration": ["packages/configuration/src/index.ts"],
+      "@qrscribe/mantine-ui": ["dist/out-tsc/packages/mantine-ui"],
+      "@qrscribe/prisma": ["dist/out-tsc/packages/prisma/src"],
+      "@qrscribe/typegraphql": ["dist/out-tsc/packages/typegraphql/src"]
     }
   },
-  "exclude": [
-    "node_modules",
-    "tmp"
-  ]
+  "exclude": ["node_modules", "tmp"]
 }

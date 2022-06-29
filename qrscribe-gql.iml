@@ -3,7 +3,17 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/applications/dev-database" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/applications/mantine-nextauth-template" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/applications/mantine-template" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/applications/typegraphql-server" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/packages/configuration" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/packages/mantine-ui" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/packages/prisma" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/packages/typegraphql" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/.idea" />
+      <excludeFolder url="file://$MODULE_DIR$/applications/mantine-ui-e2e" />
+      <excludeFolder url="file://$MODULE_DIR$/applications/mantine-template-e2e" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

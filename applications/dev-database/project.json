@@ -1,0 +1,17 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "applications/dev-database/src",
+  "projectType": "application",
+  "targets": {
+    "start": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "docker-compose up"
+        ],
+        "cwd": "applications/dev-database"
+      }
+    }
+  },
+  "tags": []
+}

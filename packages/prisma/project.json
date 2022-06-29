@@ -34,6 +34,22 @@
         "cwd": "packages/prisma"
       }
     },
+    "studio": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["yarn prisma studio --schema=$(pwd)/prisma/schema.prisma"],
+        "cwd": "packages/prisma"
+      }
+    },
+    "migrate": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "yarn prisma migrate dev --schema=$(pwd)/prisma/schema.prisma"
+        ],
+        "cwd": "packages/prisma"
+      }
+    },
     "build": {
       "dependsOn": ["generate"],
       "executor": "nx:run-commands",
