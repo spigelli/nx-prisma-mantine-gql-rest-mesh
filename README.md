@@ -1,4 +1,12 @@
-# Qrscribe
+# nx-prisma-mantine-gql-rest-mesh
+This project is an example template for a monorepo that would take a large convaluted generated graphql schema (prisma-generator-typegraphql) and using graphql mesh to combine it with smaller express services for sass integration (smtp providers, telemetry etc.) as well as a public graphql if you wanted to
+
+The other cool feature would be to generate grpc and rest services based on the mesh to leverage codegens:
+- swagger-codegen
+- graphql-codegen
+- whatever there is for grpc
+
+This way a SASS api service could offer multiple api protocols and a large host of language clients to users
 
 This project was generated using [Nx](https://nx.dev).
 
