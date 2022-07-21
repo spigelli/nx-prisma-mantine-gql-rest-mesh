@@ -1,0 +1,54 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "applications/unified-mesh/src",
+  "targets": {
+    "build": {
+      "executor": "@diogovcs/graphql-mesh:build",
+      "options": {
+        "meshYmlPath": "applications/unified-mesh/config",
+        "singleMeshFile": false,
+        "outputPath": "dist/applications/unified-mesh",
+        "rootPath": "applications/unified-mesh",
+        "tsconfigPath": "applications/unified-mesh/tsconfig.lib.json",
+        "typescriptSupport": true
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "dependsOn": [
+        {
+          "target": "build",
+          "projects": "self"
+        }
+      ],
+      "outputs": ["coverage/applications/unified-mesh"],
+      "options": {
+        "jestConfig": "applications/unified-mesh/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "dev": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "yarn mesh --dir applications/unified-mesh/config"
+        ],
+        "cwd": "applications/unified-mesh"
+      }
+    },
+    "serve": {
+      "executor": "@diogovcs/graphql-mesh:serve",
+      "options": {
+        "meshYmlPath": "applications/unified-mesh/config"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["applications/unified-mesh/**/*.ts"]
+      }
+    }
+  },
+  "tags": []
+}

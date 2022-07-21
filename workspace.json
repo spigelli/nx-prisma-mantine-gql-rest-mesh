@@ -4,11 +4,13 @@
   "projects": {
     "configuration": "packages/configuration",
     "dev-database": "applications/dev-database",
+    "express-service-template": "applications/express-service-template",
     "mantine-nextauth-template": "applications/mantine-nextauth-template",
     "mantine-template": "applications/mantine-template",
     "mantine-ui": "packages/mantine-ui",
     "prisma": "packages/prisma",
     "typegraphql": "packages/typegraphql",
-    "typegraphql-server": "applications/typegraphql-server"
+    "typegraphql-server": "applications/typegraphql-server",
+    "unified-mesh": "applications/unified-mesh"
   }
 }

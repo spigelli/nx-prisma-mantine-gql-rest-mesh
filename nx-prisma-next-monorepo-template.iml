@@ -11,6 +11,8 @@
       <sourceFolder url="file://$MODULE_DIR$/packages/mantine-ui" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/packages/prisma" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/packages/typegraphql" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/applications/express-service-template" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/applications/unified-mesh" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/applications/mantine-template-e2e" />
       <excludeFolder url="file://$MODULE_DIR$/applications/mantine-ui-e2e" />
       <excludeFolder url="file://$MODULE_DIR$/.idea" />

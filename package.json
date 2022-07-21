@@ -6,6 +6,12 @@
   "private": true,
   "dependencies": {
     "@babel/preset-react": "^7.18.6",
+    "@graphql-mesh/cli": "^0.73.4",
+    "@graphql-mesh/graphql": "^0.28.1",
+    "@graphql-mesh/json-schema": "0.27.6",
+    "@graphql-mesh/openapi": "^0.27.1",
+    "@graphql-mesh/transform-mock": "0.13.6",
+    "@graphql-mesh/transform-naming-convention": "^0.10.32",
     "@mantine/core": "^4.2.11",
     "@mantine/hooks": "^4.2.11",
     "@mantine/next": "^4.2.11",
@@ -20,6 +26,8 @@
     "class-validator": "^0.13.2",
     "cookies-next": "^2.0.5",
     "core-js": "^3.6.5",
+    "express": "4.17.2",
+    "graphql": "15.3.0",
     "graphql-fields": "^2.0.3",
     "graphql-scalars": "^1.17.0",
     "next": "12.1.6",
@@ -37,11 +45,15 @@
   "devDependencies": {
     "@angular-devkit/schematics": "^14.0.2",
     "@babel/core": "7.12.13",
+    "@babel/preset-env": "^7.0.0",
     "@babel/preset-typescript": "7.12.13",
+    "@diogovcs/graphql-mesh": "^0.2.1",
+    "@graphql-mesh/cross-helpers": "0.1.0",
     "@nrwl/cli": "14.3.6",
     "@nrwl/cypress": "14.3.6",
     "@nrwl/devkit": "^14.3.6",
     "@nrwl/eslint-plugin-nx": "14.3.6",
+    "@nrwl/express": "^14.3.6",
     "@nrwl/jest": "14.3.6",
     "@nrwl/js": "14.3.6",
     "@nrwl/linter": "14.3.6",
@@ -59,6 +71,7 @@
     "@storybook/react": "~6.5.9",
     "@svgr/webpack": "^5.4.0",
     "@testing-library/react": "13.3.0",
+    "@types/express": "4.17.13",
     "@types/graphql-fields": "^1.3.4",
     "@types/jest": "27.4.1",
     "@types/node": "^18.0.0",
@@ -87,8 +100,10 @@
     "react-test-renderer": "18.2.0",
     "ts-jest": "27.1.4",
     "ts-node": "~10.8.0",
+    "tsc-alias": "^1.6.11",
     "typegraphql-prisma": "^0.20.4",
     "typescript": "~4.7.2",
-    "url-loader": "^3.0.0"
+    "url-loader": "^3.0.0",
+    "yamlinc": "0.1.10"
   }
 }

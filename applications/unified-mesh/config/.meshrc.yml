@@ -1,0 +1,39 @@
+sources:
+  - name: express-service-template
+    handler:
+      openapi:
+        baseUrl: http://localhost:3333
+        source: ../../express-service-template/express-service-template.yaml
+  - name: prisma-typegraphql
+    handler:
+      graphql:
+        endpoint: http://localhost:4444
+
+#additionalTypeDefs: |
+#  extend type User {
+#    company: Company
+#  }
+#  extend type Company {
+#    employers: [User]
+#  }
+
+transforms:
+  - namingConvention:
+      typeNames: pascalCase
+      fieldNames: camelCase
+#  - mock:
+#      mocks:
+#        - apply: User.firstName
+#          faker: '{{name.firstName}}'
+#        - apply: User.lastName
+#          faker: '{{name.lastName}}'
+#        - apply: User.jobTitle
+#          faker: '{{name.jobTitle}}'
+#        - apply: Company.name
+#          faker: '{{company.companyName}}'
+
+#documents:
+#  - ../src/example-query.graphql
+
+serve:
+  playground: true

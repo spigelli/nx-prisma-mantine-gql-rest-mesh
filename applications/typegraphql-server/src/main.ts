@@ -26,7 +26,7 @@ export async function startApolloServer(
   });
 
   const outputInfo = {
-    ...(await server.listen(4000)),
+    ...(await server.listen(4444)),
     server: undefined,
   } as OutputInfo;
 

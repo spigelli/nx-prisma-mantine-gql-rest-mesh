@@ -280,13 +280,13 @@ enum AccountScalarFieldEnum {
 }
 
 input AccountScalarWhereInput {
-  AND: [AccountScalarWhereInput!]
-  NOT: [AccountScalarWhereInput!]
-  OR: [AccountScalarWhereInput!]
   access_token: StringNullableFilter
+  AND: [AccountScalarWhereInput!]
   expires_at: IntNullableFilter
   id: StringFilter
   id_token: StringNullableFilter
+  NOT: [AccountScalarWhereInput!]
+  OR: [AccountScalarWhereInput!]
   provider: StringFilter
   providerAccountId: StringFilter
   refresh_token: StringNullableFilter
@@ -298,13 +298,13 @@ input AccountScalarWhereInput {
 }
 
 input AccountScalarWhereWithAggregatesInput {
-  AND: [AccountScalarWhereWithAggregatesInput!]
-  NOT: [AccountScalarWhereWithAggregatesInput!]
-  OR: [AccountScalarWhereWithAggregatesInput!]
   access_token: StringNullableWithAggregatesFilter
+  AND: [AccountScalarWhereWithAggregatesInput!]
   expires_at: IntNullableWithAggregatesFilter
   id: StringWithAggregatesFilter
   id_token: StringNullableWithAggregatesFilter
+  NOT: [AccountScalarWhereWithAggregatesInput!]
+  OR: [AccountScalarWhereWithAggregatesInput!]
   provider: StringWithAggregatesFilter
   providerAccountId: StringWithAggregatesFilter
   refresh_token: StringNullableWithAggregatesFilter
@@ -352,11 +352,6 @@ input AccountUpdateManyMutationInput {
   type: StringFieldUpdateOperationsInput
 }
 
-input AccountUpdateManyWithWhereWithoutUserInput {
-  data: AccountUpdateManyMutationInput!
-  where: AccountScalarWhereInput!
-}
-
 input AccountUpdateManyWithoutUserInput {
   connect: [AccountWhereUniqueInput!]
   connectOrCreate: [AccountCreateOrConnectWithoutUserInput!]
@@ -371,9 +366,9 @@ input AccountUpdateManyWithoutUserInput {
   upsert: [AccountUpsertWithWhereUniqueWithoutUserInput!]
 }
 
-input AccountUpdateWithWhereUniqueWithoutUserInput {
-  data: AccountUpdateWithoutUserInput!
-  where: AccountWhereUniqueInput!
+input AccountUpdateManyWithWhereWithoutUserInput {
+  data: AccountUpdateManyMutationInput!
+  where: AccountScalarWhereInput!
 }
 
 input AccountUpdateWithoutUserInput {
@@ -390,6 +385,11 @@ input AccountUpdateWithoutUserInput {
   type: StringFieldUpdateOperationsInput
 }
 
+input AccountUpdateWithWhereUniqueWithoutUserInput {
+  data: AccountUpdateWithoutUserInput!
+  where: AccountWhereUniqueInput!
+}
+
 input AccountUpsertWithWhereUniqueWithoutUserInput {
   create: AccountCreateWithoutUserInput!
   update: AccountUpdateWithoutUserInput!
@@ -397,13 +397,13 @@ input AccountUpsertWithWhereUniqueWithoutUserInput {
 }
 
 input AccountWhereInput {
-  AND: [AccountWhereInput!]
-  NOT: [AccountWhereInput!]
-  OR: [AccountWhereInput!]
   access_token: StringNullableFilter
+  AND: [AccountWhereInput!]
   expires_at: IntNullableFilter
   id: StringFilter
   id_token: StringNullableFilter
+  NOT: [AccountWhereInput!]
+  OR: [AccountWhereInput!]
   provider: StringFilter
   providerAccountId: StringFilter
   refresh_token: StringNullableFilter
@@ -913,20 +913,20 @@ enum SessionScalarFieldEnum {
 
 input SessionScalarWhereInput {
   AND: [SessionScalarWhereInput!]
-  NOT: [SessionScalarWhereInput!]
-  OR: [SessionScalarWhereInput!]
   expires: DateTimeFilter
   id: StringFilter
+  NOT: [SessionScalarWhereInput!]
+  OR: [SessionScalarWhereInput!]
   sessionToken: StringFilter
   userId: StringFilter
 }
 
 input SessionScalarWhereWithAggregatesInput {
   AND: [SessionScalarWhereWithAggregatesInput!]
-  NOT: [SessionScalarWhereWithAggregatesInput!]
-  OR: [SessionScalarWhereWithAggregatesInput!]
   expires: DateTimeWithAggregatesFilter
   id: StringWithAggregatesFilter
+  NOT: [SessionScalarWhereWithAggregatesInput!]
+  OR: [SessionScalarWhereWithAggregatesInput!]
   sessionToken: StringWithAggregatesFilter
   userId: StringWithAggregatesFilter
 }
@@ -944,11 +944,6 @@ input SessionUpdateManyMutationInput {
   sessionToken: StringFieldUpdateOperationsInput
 }
 
-input SessionUpdateManyWithWhereWithoutUserInput {
-  data: SessionUpdateManyMutationInput!
-  where: SessionScalarWhereInput!
-}
-
 input SessionUpdateManyWithoutUserInput {
   connect: [SessionWhereUniqueInput!]
   connectOrCreate: [SessionCreateOrConnectWithoutUserInput!]
@@ -963,15 +958,20 @@ input SessionUpdateManyWithoutUserInput {
   upsert: [SessionUpsertWithWhereUniqueWithoutUserInput!]
 }
 
-input SessionUpdateWithWhereUniqueWithoutUserInput {
-  data: SessionUpdateWithoutUserInput!
-  where: SessionWhereUniqueInput!
+input SessionUpdateManyWithWhereWithoutUserInput {
+  data: SessionUpdateManyMutationInput!
+  where: SessionScalarWhereInput!
 }
 
 input SessionUpdateWithoutUserInput {
   expires: DateTimeFieldUpdateOperationsInput
   id: StringFieldUpdateOperationsInput
   sessionToken: StringFieldUpdateOperationsInput
+}
+
+input SessionUpdateWithWhereUniqueWithoutUserInput {
+  data: SessionUpdateWithoutUserInput!
+  where: SessionWhereUniqueInput!
 }
 
 input SessionUpsertWithWhereUniqueWithoutUserInput {
@@ -982,10 +982,10 @@ input SessionUpsertWithWhereUniqueWithoutUserInput {
 
 input SessionWhereInput {
   AND: [SessionWhereInput!]
-  NOT: [SessionWhereInput!]
-  OR: [SessionWhereInput!]
   expires: DateTimeFilter
   id: StringFilter
+  NOT: [SessionWhereInput!]
+  OR: [SessionWhereInput!]
   sessionToken: StringFilter
   user: UserRelationFilter
   userId: StringFilter
@@ -1241,13 +1241,13 @@ enum UserScalarFieldEnum {
 
 input UserScalarWhereWithAggregatesInput {
   AND: [UserScalarWhereWithAggregatesInput!]
-  NOT: [UserScalarWhereWithAggregatesInput!]
-  OR: [UserScalarWhereWithAggregatesInput!]
   email: StringNullableWithAggregatesFilter
   emailVerified: DateTimeNullableWithAggregatesFilter
   id: StringWithAggregatesFilter
   image: StringNullableWithAggregatesFilter
   name: StringNullableWithAggregatesFilter
+  NOT: [UserScalarWhereWithAggregatesInput!]
+  OR: [UserScalarWhereWithAggregatesInput!]
 }
 
 input UserUpdateInput {
@@ -1313,15 +1313,15 @@ input UserUpsertWithoutSessionsInput {
 }
 
 input UserWhereInput {
-  AND: [UserWhereInput!]
-  NOT: [UserWhereInput!]
-  OR: [UserWhereInput!]
   accounts: AccountListRelationFilter
+  AND: [UserWhereInput!]
   email: StringNullableFilter
   emailVerified: DateTimeNullableFilter
   id: StringFilter
   image: StringNullableFilter
   name: StringNullableFilter
+  NOT: [UserWhereInput!]
+  OR: [UserWhereInput!]
   sessions: SessionListRelationFilter
 }
 
@@ -1422,10 +1422,10 @@ enum VerificationTokenScalarFieldEnum {
 
 input VerificationTokenScalarWhereWithAggregatesInput {
   AND: [VerificationTokenScalarWhereWithAggregatesInput!]
-  NOT: [VerificationTokenScalarWhereWithAggregatesInput!]
-  OR: [VerificationTokenScalarWhereWithAggregatesInput!]
   expires: DateTimeWithAggregatesFilter
   identifier: StringWithAggregatesFilter
+  NOT: [VerificationTokenScalarWhereWithAggregatesInput!]
+  OR: [VerificationTokenScalarWhereWithAggregatesInput!]
   token: StringWithAggregatesFilter
 }
 
@@ -1443,10 +1443,10 @@ input VerificationTokenUpdateManyMutationInput {
 
 input VerificationTokenWhereInput {
   AND: [VerificationTokenWhereInput!]
-  NOT: [VerificationTokenWhereInput!]
-  OR: [VerificationTokenWhereInput!]
   expires: DateTimeFilter
   identifier: StringFilter
+  NOT: [VerificationTokenWhereInput!]
+  OR: [VerificationTokenWhereInput!]
   token: StringFilter
 }
 
